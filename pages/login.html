@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Login</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://kit.fontawesome.com/deb1b00585.js" crossorigin="anonymous"></script>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/login.css'>
+
+    <script src='login.js'></script>
+
+    <body class="login-background" id="login-body">
+    <header  class="flex-container" id="header-login">
+        <div class="title-container" id="title-container">
+            <h1 class="title-login"><strong>MOVIE</strong><span class="title-login-italic"><i>finder</i></span></h1>
+        </div>
+      
+    </header>
+    <div class="login-card flex-container-column">
+
+        <h1 class="login-card-title">Welcome! Login in or Register</h1>
+        <h2 class="login-card-subtitle">Log in to find the movies you're looking for!</h2>
+        <form class="login-form">
+
+      
+        <input  type="email" class="text-input" name="email" id="login-email-input" placeholder="Email">
+        <input  type="password" class="text-input" name="password" id="login-password-input" placeholder="Password">
+
+<div id="checkbox-container">
+    <input type="checkbox" name="remember" id="remember-me-checkbox"/> <label id="remember-me-checkbox-label" for="remember-me-checkbox">Remember me</label>
+<a id="forgot-password-link">Forgot Password?</a>
+</div>
+        <input value="Log in"  type="submit" id="submit-login-buttom" class="submit-buttom"/>
+    </form>
+
+    <p >Not registered yet? <a href="#">Register now</a></p>
+
+
+    <p>or<P>
+
+        
+    <button class="login-external" id="login-facebook-button"><i class="fa fa-facebook"></i></i>Login with Facebook</button>
+    <button class="login-external" id="login-twitter-button"><i class="fa fa-twitter"></i>Login with Twitter</button>
+    <button class="login-external" id="login-google-button">
+        <i class="fa fa-google"></i>Login with Google
+
+    </button>
+    </div>
+</body>
+</html>

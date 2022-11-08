@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    
+  }
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.login-background{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),url(../images/imagenfondo.webp);
+    opacity: 0.9;
+}
+
+.flex-container{
+   width: 100%;
+  justify-content: center;
+    display: flex;
+}
+.flex-container-column{
+   
+   justify-content: center;
+     display: flex;
+    flex-direction: column;
+ }
+.title-container{
+  
+    color: #2890c0;
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+
+
+
+
+.login-card{
+padding: 2em;
+margin: 1em 1em 3em 1em;
+text-align: center;
+border-radius: 0.5em;
+background-color: rgba(47,47,47,255)
+
+    
+}
+
+
+
+
+
+
+.inline-line{
+    width:40%;
+    display: inline;
+    height:0.1em
+}
+
+.login-external{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    background-color: transparent;
+    border-radius:2em;
+    margin-top: 1.5em;
+    color: white; font-size: 1rem;
+    border-color: white;
+    padding: 0.5em;
+    font-weight: bold;
+    align-items: center;
+}
+
+.login-external i{
+    padding-left: 40px;
+    padding-right: 20px;
+    font-size: 1.5rem;
+
+}
+
+
+.login-card-title{
+    font-size: 0.8rem;
+    font-weight: bold;
+    
+    margin-top: 0.5em;
+}
+
+.login-card-subtitle{
+    font-size: 0.7rem;
+    margin-top: 1em;
+}
+
+
+.text-input{
+    width: 100%;
+    display: block;
+    margin-top: 1em;
+    padding: 0.8em;
+    width: 100%;
+    border-style: none;
+    border-radius: 0.2em;
+}
+
+p{
+    font-size: 0.8rem;
+}
+
+
+
+#remember-me-checkbox-label{
+   flex-grow: 1;
+}
+
+
+#checkbox-container{
+    width: 100%;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 0.7rem;
+}
+
+
+.submit-buttom{
+    
+    width: 100%;
+    background-color: #2ab9fd
+    ;
+    border-radius:2em;
+    margin-top: 1em;
+    color: white; 
+    font-size: 1rem;
+    border-style: none;
+    padding: 1em;
+    font-weight: bold;
+}
+
+
+.login-form{
+    
+    margin-top: 1em;
+}
