@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    
   }
 
 body{
@@ -45,16 +44,13 @@ background-color: rgba(47,47,47,255)
     
 }
 
-
-
-
-
-
-.inline-line{
-    width:40%;
-    display: inline;
-    height:0.1em
+#login-card-title{
+    margin-top: 0;
 }
+
+
+
+
 
 .login-external{
     display: flex;
@@ -140,4 +136,22 @@ p{
 .login-form{
     
     margin-top: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+   body{
+    margin: 8em 10em
+   }
+   .login-external{
+    padding-left: 3em;
+   }
+}
+@media only screen and (min-width: 992px) {
+    body{
+        margin: 1em 32em 5em 32em
+       }
+
+       .login-external{
+        margin-top: 1em;
+       }
 }
