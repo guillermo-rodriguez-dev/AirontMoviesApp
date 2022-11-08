@@ -3,12 +3,13 @@
   }
 
 body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+
     color: white;
 }
 
 .login-background{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),url(../images/imagenfondo.webp);
+    background-image:url(../images/imagenfondo.jpg);
     opacity: 0.9;
 }
 
@@ -46,8 +47,12 @@ background-color: rgba(47,47,47,255)
 
 #login-card-title{
     margin-top: 0;
+    font-family: 'Montserrat';
+    font-weight: 500;
 }
-
+#login-card-title strong{
+    font-weight: 900;
+}
 
 
 
