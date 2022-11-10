@@ -143,6 +143,29 @@ p{
     margin-top: 1em;
 }
 
+.line-with-text{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.line-with-text::before{
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid white;
+    margin-bottom: 0.5em;
+    margin-right: 2em;
+}
+
+.line-with-text::after{
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid white;
+    margin-bottom: 0.5em;
+    margin-left: 2em;
+}
+
+
 @media only screen and (min-width: 768px) {
    body{
     margin: 8em 10em
@@ -153,7 +176,7 @@ p{
 }
 @media only screen and (min-width: 992px) {
     body{
-        margin: 1em 32em 5em 32em
+        margin: 1em 35% 5em 35%
        }
 
        .login-external{
