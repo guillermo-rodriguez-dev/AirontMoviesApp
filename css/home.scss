@@ -1,9 +1,12 @@
+
+//variables for the home page
+
 $main-color: #2791C2;
 $title-font-family: "Montserrat", sans-serif;
 $main-font-family: "Open Sans", sans-serif;
 $gender-lable-color: #0FEFFD;
-$rating-start-color: #FF9900
-;
+$rating-start-color: #FF9900;
+$most-watched-background-color: #1E1E1E  ;
 * {
   margin: 0;
   padding: 0;
@@ -11,14 +14,18 @@ $rating-start-color: #FF9900
   font-family: $main-font-family;
   color: white;
 }
-
+.body-container {
+  display: grid;
+  grid-template-columns: auto;
+}
+//navbar styling
 .navbar {
   background-color: $main-color;
   display: grid;
 
   height: 5.6rem;
   grid-template-columns: auto auto auto auto;
-padding: 1.375em  2.5em;
+  padding: 1.375em 2.5em;
 }
 
 
@@ -27,7 +34,7 @@ padding: 1.375em  2.5em;
   font-size: 1.5rem;
   color: white;
   margin: auto;
-  
+
   strong {
     font-weight: 900;
   }
@@ -38,10 +45,6 @@ padding: 1.375em  2.5em;
 
 }
 
-.body-container {
-  display: grid;
-  grid-template-columns: auto;
-}
 
 
 .searchbar-container {
@@ -90,12 +93,14 @@ padding: 1.375em  2.5em;
 
 }
 
+//end of navbar styling
 
-.main-container{
+//start of main content styling
+.main-container {
   display: grid;
   height: 850px;
   padding: 152px 95px;
-  background: linear-gradient(to bottom, #080E20 0%, transparent, rgba(15, 24, 54, 0.4)  100%), url(../images/avatar.png);
+  background: linear-gradient(to bottom, #080E20 0%, transparent, rgba(15, 24, 54, 0.4) 100%), url(../images/avatar.png);
   background-repeat: no-repeat;
 
   background-size: cover;
@@ -104,46 +109,106 @@ padding: 1.375em  2.5em;
 }
 
 
-.gender-label{
+.gender-label {
   font-size: 1.5rem;
   color: $gender-lable-color;
- 
-  
-
+  margin-block-start: 0;
+  margin-block-end: 0;
+align-self: center;
 }
 
-.rating-start{
+.rating-start {
   color: $rating-start-color;
- height: 1.375em;
+  height: 1.375em;
   width: 1.375em;
   display: inline;
-  
+
 }
 
-.rating-container{
-  display:grid;
+.rating-container {
+  display: grid;
   grid-template-columns: auto auto auto auto auto;
   justify-content: start;
   column-gap: 0.75em;
 }
 
 
-.movie-title{
+.movie-title {
   font-size: 3.5em;
   font-weight: 700;
 }
 
 
-.main-description-text{
+.main-description-text {
   font-size: 1.5rem;
   font-weight: 400;
 }
 
-.watch-now-buttom{
+.watch-now-buttom {
   border-radius: 93px;
   background-color: $main-color;
   border-style: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
 }
+
+//end of main content styling
+
+//start of most watched movies styling
+.most-watched-movies-container{
+  background-color: $most-watched-background-color;
+  padding: 50px 95px 250px 95px ;
+  display: grid;
+  row-gap: 50px;
+
+
+}
+
+.most-watched-title{
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.movie{
+  background: linear-gradient(to top, #000000  20%, rgba(0, 0, 0, 0) 100%), url(../images/jurassic_world.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 620px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr;
+  justify-content: end;
+  padding: 0 50px 30px 50px;
+  
+}
+
+.most-watched-movie-title{
+  font-size: 2.25rem;
+  font-weight: 700;
+  align-self: end;
+  vertical-align: top;
+  line-height: 64px;
+}
+
+.rating-start--small{
+  color: $rating-start-color;
+height: 13px;
+width: 13px;
+padding:15px 6px 20px 0;
+
+}
+
+
+.most-watched-movie-description{
+  size: 1em;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+//end of most watched movies styling

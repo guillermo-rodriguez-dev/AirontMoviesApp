@@ -6,6 +6,11 @@
   color: white;
 }
 
+.body-container {
+  display: grid;
+  grid-template-columns: auto;
+}
+
 .navbar {
   background-color: #2791C2;
   display: grid;
@@ -25,11 +30,6 @@
 }
 .app-name i {
   font-weight: 400;
-}
-
-.body-container {
-  display: grid;
-  grid-template-columns: auto;
 }
 
 .searchbar-container {
@@ -84,6 +84,9 @@
 .gender-label {
   font-size: 1.5rem;
   color: #0FEFFD;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  align-self: center;
 }
 
 .rating-start {
@@ -117,6 +120,56 @@
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
+}
+
+.most-watched-movies-container {
+  background-color: #1E1E1E;
+  padding: 50px 95px 250px 95px;
+  display: grid;
+  row-gap: 50px;
+}
+
+.most-watched-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.movie {
+  background: linear-gradient(to top, #000000 20%, rgba(0, 0, 0, 0) 100%), url(../images/jurassic_world.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 620px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr;
+  justify-content: end;
+  padding: 0 50px 30px 50px;
+}
+
+.most-watched-movie-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  align-self: end;
+  vertical-align: top;
+  line-height: 64px;
+}
+
+.rating-start--small {
+  color: #FF9900;
+  height: 13px;
+  width: 13px;
+  padding: 15px 6px 20px 0;
+}
+
+.most-watched-movie-description {
+  size: 1em;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 /*# sourceMappingURL=home.css.map */
