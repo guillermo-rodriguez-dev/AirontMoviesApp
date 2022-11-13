@@ -1,21 +1,21 @@
-* {
-    box-sizing: border-box;
-}
+$main-font: 'Open Sans', sans-serif;
+$title-font: 'Montserrat', sans-serif;
+$background-image: url(../images/imagenfondo.jpg);
+$title-text-color: #2890c0;
 
-body {
-    font-family: 'Open Sans', sans-serif;
+.main-container {
+    font-family: $main-font;
     justify-content: center;
     color: white;
-
-}
-
-.login-background {
-    background-image: url(../images/imagenfondo.jpg);
-    opacity: 0.9;
+    background-image: $background-image;
     text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.flex-container {
+.header {
     width: 100%;
     justify-content: center;
     display: flex;
@@ -27,87 +27,53 @@ body {
     align-items: center;
 }
 
-
-
-.header__title {
+.header__text {
     width: 100%;
-    color: #2890c0;
+    color: $title-text-color;
     font-size: 2.25em;
     text-align: center;
     margin-top: 66px;
     margin-bottom: 66px;
+    font-family: $title-font;
+    font-weight: 500;
+    strong {
+        font-weight: 900;
+
+    }
 }
-
-
-
-
 
 .login-card {
     padding: 2em;
     display: flex;
     text-align: center;
-    border-radius: 0.5em;
+    border-radius: 10px;
     background-color: rgba(47, 47, 47, 255);
     width: 580px;
     height: 1029px;
-
-}
-
-#login-title {
-    margin-top: 0;
-    font-family: 'Montserrat';
-    font-weight: 500;
-    font-size: 42px;
-    width: 100%;
-}
-
-#login-title strong {
-    font-weight: 900;
-    font-size: 42px;
-
-}
-
-
-
-
-.login-external {
     display: flex;
-    justify-content: start;
-    width: 487px;
-    height: 70px;
-    background-color: transparent;
-    border-radius: 2em;
-    margin-top: 1.5em;
-    color: white;
-    font-size: 24px;
-    border-color: white;
-    padding: 0.5em;
-    font-weight: bold;
+    flex-direction: column;
     align-items: center;
 }
 
-.login-external i {
-    padding-left: 40px;
-    padding-right: 20px;
+.login-card__title {
     font-size: 1.5rem;
-
-}
-
-
-.login-card-title {
-    font-size: 24px;
     font-weight: bold;
 
     margin-top: 0.5em;
 }
 
-.login-card-subtitle {
-    font-size: 24px;
+.login-card__subtitle {
+    font-size: 1.5rem;
     margin-top: 1em;
 }
 
-
-.text-input {
+.login-form{
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.text-input{
     width: 100%;
     display: block;
     margin-top: 1em;
@@ -115,32 +81,31 @@ body {
     height: 70px;
     border-style: none;
     border-radius: 5px;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 
 
 
-
-#remember-me-checkbox-label {
-    flex-grow: 1;
-
-}
-
-#remember-me-checkbox {
-    width: 30px;
-    height: 30px;
-}
-
-
-#checkbox-container {
+.checkbox-container {
     width: 100%;
     text-align: start;
     display: flex;
     align-items: center;
     margin-top: 10px;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
+.remember-me-checkbox__label {
+    flex-grow: 1;
+
+}
+
+.remember-me-checkbox {
+    width: 30px;
+    height: 30px;
+}
+
+
 
 
 .submit-buttom {
@@ -151,7 +116,7 @@ body {
     border-radius: 2em;
     margin-top: 1em;
     color: white;
-    font-size: 24px;
+    font-size: 1.5rem;
     border-style: none;
     padding: 1em;
     font-weight: bold;
@@ -162,13 +127,6 @@ body {
 .not-registered-container {
     margin-top: 40px;
     font-size: 20px;
-}
-
-.login-form {
-    margin-top: 1em;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 }
 
 .line-with-text {
@@ -196,6 +154,7 @@ body {
 }
 
 
+
 @media only screen and (min-width: 641px) {
 
 
@@ -209,23 +168,29 @@ body {
         padding: 32px 42px 42px 42px;
     }
 
-    #login-title {
 
-        font-size: 36px;
+    .header__text {
+        width: 100%;
+        color: $title-text-color;
+        font-size: 2.5em;
+        text-align: center;
+        margin-top: 66px;
+        margin-bottom: 66px;
+        font-family: $title-font;
+        font-weight: 500;
+        strong {
+            font-weight: 900;
+    
+        }
     }
 
-    #login-title strong {
-        font-size: 36px;
-
-    }
-
-    .login-card-title {
-        font-size: 16px;
+    .login-card__title {
+        font-size: 1rem;
         margin-top: 0;
     }
 
-    .login-card-subtitle {
-        font-size: 10px;
+    .login-card__subtitle {
+        font-size: 0.625;
         margin-top: 0;
         margin-bottom: 0;
 
@@ -239,7 +204,7 @@ body {
         height: 38px;
         border-style: none;
         border-radius: 5px;
-        font-size: 13px;
+        font-size: 0.813rem;
         width: 355px;
     }
 
@@ -249,7 +214,7 @@ body {
         display: flex;
         align-items: center;
         margin-top: 10px;
-        font-size: 10px;
+        font-size: 0.625;
     }
 
     .submit-buttom {
@@ -260,7 +225,7 @@ body {
         border-radius: 2em;
         margin-top: 1em;
         color: white;
-        font-size: 15px;
+        font-size: 0.94rem;
         border-style: none;
         padding: 1em;
         font-weight: bold;
@@ -276,7 +241,7 @@ body {
         width: 358px;
         height: 45px;
         margin-bottom: 10px;
-        font-size: 14px;
+        font-size: 0.875rem;
         margin-top: 0px;
     }
 
