@@ -172,4 +172,61 @@
   line-height: 20px;
 }
 
+@media only screen and (min-width: 834px) {
+  .main-container {
+    height: 34.375em;
+    padding: 5.5625em 7.8125em 5.5625em 6.5em;
+    width: 100%;
+  }
+  .gender-label {
+    font-size: 0.875rem;
+  }
+  .rating-start {
+    height: 0.8125em;
+    width: 0.8125em;
+  }
+  .rating-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: start;
+    column-gap: 0.75em;
+  }
+  .main-description-text {
+    font-size: 1rem;
+  }
+  .watch-now-buttom {
+    width: 15.625em;
+    height: 3.75em;
+    font-size: 1.25rem;
+  }
+  .most-watched-movies-container {
+    width: 100%;
+    grid-template-columns: auto auto auto;
+    column-gap: 50px;
+    padding: 0.75em 3.125em 9.375em 3.125em;
+  }
+  .most-watched-title {
+    grid-column: 1/4;
+  }
+  .movie {
+    max-height: 19.375em;
+    max-width: 14.0625em;
+  }
+  .most-watched-movie-title {
+    font-size: 1.5rem;
+  }
+  .most-watched-movie-description {
+    font-size: 0.625rem;
+    line-height: 1rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  .rating-start--small {
+    color: #FF9900;
+    height: 9px;
+    width: 9px;
+    padding: 15px 4px 20px 0;
+  }
+}
+
 /*# sourceMappingURL=home.css.map */
