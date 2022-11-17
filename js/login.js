@@ -1,5 +1,5 @@
 
-
+//function to register user
 async function signUp(event) {
     event.preventDefault();
     let loginForm = document.getElementById("loginForm");
@@ -40,7 +40,7 @@ async function signUp(event) {
 
         }
         else if (response.status == 400) {
-            alert(response.body);
+            alert("There was an Error Creating User");
         }
 
     }
@@ -53,7 +53,7 @@ async function signUp(event) {
 
 
 
-
+//function to login user
 async function signIn(event) {
     event.preventDefault();
     let loginForm = document.getElementById("loginForm");
@@ -94,7 +94,7 @@ async function signIn(event) {
 
         }
         else if (response.status == 400) {
-            alert(response.body);
+            alert("User or password incorrect");
         }
 
     }
