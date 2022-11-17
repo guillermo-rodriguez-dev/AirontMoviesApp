@@ -1,285 +1,290 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body {
-    font-family: 'Open Sans', sans-serif;
-    justify-content: center;
-    color: white;
-
+.main-container {
+  font-family: "Open Sans", sans-serif;
+  justify-content: center;
+  color: white;
+  background-image: url(../images/imagenfondo.jpg);
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.login-background {
-    background-image: url(../images/imagenfondo.jpg);
-    opacity: 0.9;
-    text-align: center;
-}
-
-.flex-container {
-    width: 100%;
-    justify-content: center;
-    display: flex;
+.header {
+  width: 100%;
+  justify-content: center;
+  display: flex;
 }
 
 .flex-container-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-
-.header__title {
-    width: 100%;
-    color: #2890c0;
-    font-size: 2.25em;
-    text-align: center;
-    margin-top: 66px;
-    margin-bottom: 66px;
+.header__text {
+  width: 100%;
+  color: #2890c0;
+  font-size: 2.25em;
+  text-align: center;
+  margin-top: 4.125em;
+  margin-bottom: 4.125em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
-
-
-
-
+.header__text strong {
+  font-weight: 900;
+}
 
 .login-card {
-    padding: 2em;
-    display: flex;
-    text-align: center;
-    border-radius: 0.5em;
-    background-color: rgba(47, 47, 47, 255);
-    width: 580px;
-    height: 1029px;
-
+  padding: 2em 2em 3.125em 2em;
+  display: flex;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgb(47, 47, 47);
+  width: 36.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4.625rem;
 }
 
-#login-title {
-    margin-top: 0;
-    font-family: 'Montserrat';
-    font-weight: 500;
-    font-size: 42px;
-    width: 100%;
+.login-card__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 0.5em;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
-#login-title strong {
-    font-weight: 900;
-    font-size: 42px;
-
+.login-card__subtitle {
+  font-size: 1.5rem;
+  margin-top: 1em;
 }
 
-
-
-
-.login-external {
-    display: flex;
-    justify-content: start;
-    width: 487px;
-    height: 70px;
-    background-color: transparent;
-    border-radius: 2em;
-    margin-top: 1.5em;
-    color: white;
-    font-size: 24px;
-    border-color: white;
-    padding: 0.5em;
-    font-weight: bold;
-    align-items: center;
+.login-form {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-
-.login-external i {
-    padding-left: 40px;
-    padding-right: 20px;
-    font-size: 1.5rem;
-
-}
-
-
-.login-card-title {
-    font-size: 24px;
-    font-weight: bold;
-
-    margin-top: 0.5em;
-}
-
-.login-card-subtitle {
-    font-size: 24px;
-    margin-top: 1em;
-}
-
 
 .text-input {
+  width: 100%;
+  display: block;
+  margin-top: 1em;
+  padding: 0.8em;
+  height: 4.375rem;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.password-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  width: 100%;
+  border-radius: 5px;
+  background-color: white;
+  margin-top: 1em;
+}
+.password-container img {
+  padding-right: 16px;
+  align-self: center;
+}
+
+.password-input {
+  padding: 0.8em;
+  height: 4.375rem;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.checkbox-container {
+  width: 100%;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  margin-top: 0.625em;
+  font-size: 1.5rem;
+}
+
+.remember-me-checkbox__label {
+  flex-grow: 1;
+}
+
+.remember-me-checkbox {
+  width: 1.875em;
+  height: 1.875em;
+}
+
+.submit-buttom {
+  width: 30.375rem;
+  height: 4.375rem;
+  background-color: #2ab9fd;
+  border-radius: 2em;
+  margin-top: 1em;
+  color: white;
+  font-size: 1.5rem;
+  border-style: none;
+  font-weight: bold;
+}
+
+.not-registered-container {
+  margin-top: 2.5em;
+  font-size: 1.25rem;
+}
+
+.line-with-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.line-with-text::before {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid white;
+  margin-bottom: 0.5em;
+  margin-right: 2em;
+}
+
+.line-with-text::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid white;
+  margin-bottom: 0.5em;
+  margin-left: 2em;
+}
+
+.login-external {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2em;
+  margin-top: 1.5em;
+  color: white;
+  font-size: 1rem;
+  border-color: white;
+  padding: 0 0 0 4.6875em;
+  font-weight: bold;
+  align-items: center;
+  height: 4.375rem;
+  font-size: 1.5rem;
+  border-width: 2px;
+  border-style: solid;
+}
+.login-external img {
+  margin-right: 1.5625em;
+  padding-top: 0.8125rem;
+  padding-bottom: 0.8125rem;
+}
+
+@media only screen and (min-width: 834px) {
+  .main-container {
+    margin-top: 16.75em;
+    margin-bottom: 16.75em;
+  }
+  .login-form {
+    margin-top: 0px;
+  }
+  .login-card {
+    width: 27.8125rem;
+    padding: 2em 2.625em 2.625em 2.625em;
+  }
+  .header__text {
     width: 100%;
-    display: block;
+    color: #2890c0;
+    font-size: 2.25rem;
+    text-align: center;
+    margin-top: 4.125em;
+    margin-bottom: 4.125em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  .header__text strong {
+    font-weight: 900;
+  }
+  .login-card__title {
+    font-size: 1rem;
+    margin-top: 0;
+  }
+  .login-card__subtitle {
+    font-size: 0.625rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .text-input {
+    width: 100%;
     margin-top: 1em;
     padding: 0.8em;
-    height: 70px;
+    height: 2.375em;
     border-style: none;
-    border-radius: 5px;
-    font-size: 24px;
-}
-
-
-
-
-
-#remember-me-checkbox-label {
-    flex-grow: 1;
-
-}
-
-#remember-me-checkbox {
-    width: 30px;
-    height: 30px;
-}
-
-
-#checkbox-container {
+    font-size: 0.813rem;
+  }
+  .password-container {
+    background-color: white;
+  }
+  .password-container img {
+    height: 0.75em;
+    padding: 0;
+    align-self: center;
+    padding-right: 1em;
+  }
+  .password-input {
+    padding: 0.8em;
+    height: 2.375em;
+    border-style: none;
+    font-size: 0.813rem;
+  }
+  .checkbox-container {
     width: 100%;
     text-align: start;
     display: flex;
     align-items: center;
-    margin-top: 10px;
-    font-size: 24px;
-}
-
-
-.submit-buttom {
-
-    width: 486px;
-    height: 70px;
+    margin-top: 0.625em;
+    font-size: 0.625rem;
+  }
+  .submit-buttom {
+    width: 22.1875em;
+    height: 3.125em;
     background-color: #2ab9fd;
     border-radius: 2em;
     margin-top: 1em;
     color: white;
-    font-size: 24px;
+    font-size: 0.94rem;
     border-style: none;
     padding: 1em;
     font-weight: bold;
-
+  }
+  .not-registered-container {
+    margin-top: 0.625em;
+    font-size: 0.625em;
+  }
+  .login-external {
+    width: 22.375em;
+    height: 2.8125em;
+    margin-bottom: 0.625em;
+    font-size: 0.875rem;
+    margin-top: 0px;
+  }
+  .login-external img {
+    margin-right: 1.5625em;
+    padding-top: 0.8125rem;
+    padding-bottom: 0.8125rem;
+    width: 1.75em;
+  }
 }
 
-
-.not-registered-container {
-    margin-top: 40px;
-    font-size: 20px;
-}
-
-.login-form {
-    margin-top: 1em;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.line-with-text {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-
-}
-
-.line-with-text::before {
-    content: "";
-    flex: 1;
-    border-bottom: 1px solid white;
-    margin-bottom: 0.5em;
-    margin-right: 2em;
-}
-
-.line-with-text::after {
-    content: "";
-    flex: 1;
-    border-bottom: 1px solid white;
-    margin-bottom: 0.5em;
-    margin-left: 2em;
-}
-
-
-@media only screen and (min-width: 641px) {
-
-
-    .login-form {
-        margin-top: 0px;
-    }
-
-    .login-card {
-        width: 445px;
-        height: 570px;
-        padding: 32px 42px 42px 42px;
-    }
-
-    #login-title {
-
-        font-size: 36px;
-    }
-
-    #login-title strong {
-        font-size: 36px;
-
-    }
-
-    .login-card-title {
-        font-size: 16px;
-        margin-top: 0;
-    }
-
-    .login-card-subtitle {
-        font-size: 10px;
-        margin-top: 0;
-        margin-bottom: 0;
-
-    }
-
-    .text-input {
-        width: 100%;
-        display: block;
-        margin-top: 1em;
-        padding: 0.8em;
-        height: 38px;
-        border-style: none;
-        border-radius: 5px;
-        font-size: 13px;
-        width: 355px;
-    }
-
-    #checkbox-container {
-        width: 100%;
-        text-align: start;
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-        font-size: 10px;
-    }
-
-    .submit-buttom {
-
-        width: 355px;
-        height: 50px;
-        background-color: #2ab9fd;
-        border-radius: 2em;
-        margin-top: 1em;
-        color: white;
-        font-size: 15px;
-        border-style: none;
-        padding: 1em;
-        font-weight: bold;
-
-    }
-
-    .not-registered-container {
-        margin-top: 10px;
-        font-size: 10px;
-    }
-
-    .login-external {
-        width: 358px;
-        height: 45px;
-        margin-bottom: 10px;
-        font-size: 14px;
-        margin-top: 0px;
-    }
-
-}
-
-@media only screen and (min-width: 834px) {}
+/*# sourceMappingURL=login.css.map */

@@ -14,50 +14,55 @@
 
     <link rel='stylesheet' type='text/css' media='screen' href='../css/login.css'>
 
-    <script src='../js/login.js'></script>
 
-<body class="login-background flex-container-column " id="login-body">
-    <header class="flex-container" id="header-login">
-        <div class="title-container" id="title-container">
+<body class="main-container" id="login-body">
+    <header class="header" id="header-login">
+        <div class="header__text" id="title-container">
             <h1 class="title-login" id="login-title"><strong>MOVIE</strong><span
                     class="title-login-italic"><i>finder</i></span></h1>
         </div>
 
     </header>
-    <div class="login-card flex-container-column">
+    <div class="login-card">
 
-        <h2 class="login-card-title">Welcome! Log in or Register</h2>
-        <h3 class="login-card-subtitle">Log in to find the movies you're looking for!</h3>
-        <form class="login-form" id="loginForm" action="http://localhost:3000/users" onsubmit="return signUp(event)" method="post">
-            <input type="email" class="text-input" name="email" id="login-email-input" placeholder="Email">
-            <input type="password" class="text-input" name="password" id="login-password-input" placeholder="Password">
-
-            <div id="checkbox-container">
-                <input type="checkbox" name="remember" id="remember-me-checkbox" /> <label
-             class="label"       id="remember-me-checkbox-label" for="remember-me-checkbox">Remember me</label>
+        <h2 class="login-card__title">Welcome! Log in or Register</h2>
+        <h3 class="login-card__subtitle">Log in to find the movies you're looking for!</h3>
+        <form class="login-form" id="loginForm" action="http://localhost:3000/users" onsubmit="return signIn(event)"
+            method="post">
+            <input type="email" class="text-input" name="email" id="login-email-input" placeholder="Email"/>
+            <div class="password-container">
+                <input type="password" class="password-input" name="password" id="login-password-input" placeholder="Password"/>
+                <img src="../images/eye.png" id="hide-revel-password"/>
+            </div>
+           
+            <div class="checkbox-container">
+                <input type="checkbox" name="remember" class="remember-me-checkbox" /> <label
+                    class="remember-me-checkbox__label" for="remember-me-checkbox">Remember me</label>
                 <a id="forgot-password-link">Forgot Password?</a>
             </div>
             <input value="Log in" type="submit" id="submit-login-buttom" class="submit-buttom" />
         </form>
-<div class="not-registered-container">
-    <p >Not registered yet? <a href="#">Register now</a></p>
+        <div class="not-registered-container">
+            <p>Not registered yet? <a href="#">Register now</a></p>
 
-</div>
+        </div>
 
 
         <p class="line-with-text">or
-        <P>
+        </p>
 
 
-            <button class="login-external" id="login-facebook-button"><i class="fa fa-facebook"></i></i>Login with
-                Facebook</button>
-            <button class="login-external" id="login-twitter-button"><i class="fa fa-twitter"></i>Login with
-                Twitter</button>
-            <button class="login-external" id="login-google-button">
-                <i class="fa fa-google"></i>Login with Google
+        <button class="login-external" id="login-facebook-button"><img src="../images/facebook-icon.png"></img>Login
+            with
+            Facebook</button>
+        <button class="login-external" id="login-twitter-button"><img src="../images/google-icon.png"></img>Login with
+            Twitter</button>
+        <button class="login-external" id="login-google-button">
+            <img src="../images/twitter-icon.png"></img>Login with Google
 
-            </button>
+        </button>
     </div>
 </body>
+<script src='../js/login.js'></script>
 
 </html>

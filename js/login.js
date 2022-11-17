@@ -77,8 +77,8 @@ async function signIn(event) {
         return false;
     }
 
-    await fetch("http://localhost:3000/users", {
-        method: "GET",
+    await fetch("http://localhost:3000/login", {
+        method: "post",
         body: JSON.stringify({
             email: email,
             password: password
@@ -90,7 +90,7 @@ async function signIn(event) {
     }).then(response => {
         if (response.status == 200) {
             alert("User logged in successfully");
-            window.location.href = "login.html";
+            window.location.href = "home.html";
 
         }
         else if (response.status == 400) {
@@ -101,6 +101,26 @@ async function signIn(event) {
 
 
     ).catch(error => console.log("Error " + error));
-
+ogin-password-input
 
 }
+
+
+const passwordInput = document.getElementById("login-password-input");
+
+const hideRevelPassword = document.getElementById("hide-revel-password");
+
+
+hideRevelPassword.addEventListener("click", function () {
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        console.log("password revel");
+      
+    }
+    else {
+        passwordInput.type = "password";
+        console.log("password");
+    }
+
+
+});
