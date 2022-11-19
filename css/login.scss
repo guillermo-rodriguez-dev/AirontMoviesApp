@@ -1,7 +1,4 @@
-$main-font: 'Open Sans', sans-serif;
-$title-font: 'Montserrat', sans-serif;
-$background-image: url(../images/imagenfondo.jpg);
-$title-text-color: #2890c0;
+@import 'constants.scss';
 
 * {
     box-sizing: border-box;
@@ -352,4 +349,3 @@ $title-text-color: #2890c0;
 
 }
 
-@media only screen and (min-width: 834px) {}

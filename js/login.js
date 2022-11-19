@@ -1,4 +1,6 @@
 
+const emailRegex = /.*@.*[.].*/;
+const passwordRegex = /.{8}.*/;
 //function to register user
 async function signUp(event) {
     event.preventDefault();
@@ -10,7 +12,7 @@ async function signUp(event) {
         alert("Please enter your email");
         return false;
     }
-    if (email.indexOf("@") == -1) {
+    if (!emailRegex.test(email)) {
         alert("Please enter a valid email");
         return false;
     }
@@ -18,7 +20,7 @@ async function signUp(event) {
         alert("Please enter your password");
         return false;
     }
-    if (password.length < 8) {
+    if (!passwordRegex.test(password)) {
         alert("Password must be at least 8 characters");
         return false;
     }
@@ -64,7 +66,7 @@ async function signIn(event) {
         alert("Please enter your email");
         return false;
     }
-    if (email.indexOf("@") == -1) {
+    if (!emailRegex.test(email)) {
         alert("Please enter a valid email");
         return false;
     }
@@ -72,7 +74,7 @@ async function signIn(event) {
         alert("Please enter your password");
         return false;
     }
-    if (password.length < 8) {
+    if (!passwordRegex.test(password)) {
         alert("Password must be at least 8 characters");
         return false;
     }
@@ -101,7 +103,7 @@ async function signIn(event) {
 
 
     ).catch(error => console.log("Error " + error));
-ogin-password-input
+    ogin - password - input
 
 }
 
@@ -115,7 +117,7 @@ hideRevelPassword.addEventListener("click", function () {
     if (passwordInput.type === "password") {
         passwordInput.type = "text";
         console.log("password revel");
-      
+
     }
     else {
         passwordInput.type = "password";

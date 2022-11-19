@@ -1,7 +1,4 @@
 
-
-
-
 const multiCardIcon = document.getElementById("multi-card-switch");
 
 const oneCardIcon = document.getElementById("one-card-switch");
