@@ -34,7 +34,7 @@ const addMostWatchesMovies = async () => {
         movie.appendChild(movieDescription);
         movieContainer.appendChild(movie)
     }
-    return data;
+  
 }
 
 
