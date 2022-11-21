@@ -1,0 +1,128 @@
+.blue-button {
+  border-radius: 93px;
+  background-color: #2791C2;
+  border-style: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+@media only screen and (min-width: 834px) {
+  .blue-button {
+    width: 15.625em;
+    height: 3.75em;
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .blue-button {
+    width: 16.3125em;
+    height: 3.4375em;
+    font-size: 0.9375em;
+  }
+}
+* {
+  color: white;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(359.32deg, #111111 0.53%, rgba(17, 17, 17, 0) 114.52%), url(../images/avatar.png) no-repeat top;
+  background-size: 100% 554px;
+  background-color: #1E1E1E;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: auto;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 386px;
+  width: 100%;
+  row-gap: 30px;
+}
+
+.buttom-container {
+  width: 310px;
+  height: 81px;
+}
+
+.movie-title {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  color: #2890c0;
+}
+
+.description {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.meta-data-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 30px;
+}
+
+.meta-data {
+  display: grid;
+  row-gap: 30px;
+}
+
+.meta-data-title {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.meta-data-value {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.footer {
+  display: grid;
+  margin: 60px;
+  grid: auto auto;
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+.footer-title {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  grid-column: 1/3;
+  margin-bottom: 60px;
+}
+
+.movie-image {
+  width: 243.04px;
+  height: 243.04px;
+  object-fit: fill;
+  display: grid;
+}
+
+.more-movies-icon {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.icon-image {
+  margin: 25px;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(45deg);
+}
+
+/*# sourceMappingURL=modal.css.map */

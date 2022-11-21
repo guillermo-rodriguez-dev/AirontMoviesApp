@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -11,20 +10,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&family=Open+Sans:wght@300&display=swap"
         rel="stylesheet">
-
     <link rel='stylesheet' type='text/css' media='screen' href='../css/login.css'>
-
-
 <body class="main-container" id="login-body">
     <header class="header" id="header-login">
         <div class="header__text" id="title-container">
             <h1 class="title-login" id="login-title"><strong>MOVIE</strong><span
                     class="title-login-italic"><i>finder</i></span></h1>
         </div>
-
     </header>
     <div class="login-card">
-
         <h2 class="login-card__title">Welcome! Log in or Register</h2>
         <h3 class="login-card__subtitle">Log in to find the movies you're looking for!</h3>
         <form class="login-form" id="loginForm" action="http://localhost:3000/users" onsubmit="return signIn(event)"
@@ -34,7 +28,6 @@
                 <input type="password" pattern=".{8,}" class="password-input" name="password" id="login-password-input" placeholder="Password"/>
                 <img src="../images/eye.png" id="hide-revel-password"/>
             </div>
-           
             <div class="checkbox-container">
                 <input type="checkbox" name="remember" class="remember-me-checkbox" /> <label
                     class="remember-me-checkbox__label" for="remember-me-checkbox">Remember me</label>
@@ -44,14 +37,9 @@
         </form>
         <div class="not-registered-container">
             <p>Not registered yet? <a href="#">Register now</a></p>
-
         </div>
-
-
         <p class="line-with-text">or
         </p>
-
-
         <button class="login-external" id="login-facebook-button"><img src="../images/facebook-icon.png"></img>Login
             with
             Facebook</button>
@@ -59,10 +47,8 @@
             Twitter</button>
         <button class="login-external" id="login-google-button">
             <img src="../images/twitter-icon.png"></img>Login with Google
-
         </button>
     </div>
 </body>
 <script src='../js/login.js'></script>
-
 </html>
