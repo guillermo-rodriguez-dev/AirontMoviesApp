@@ -253,6 +253,10 @@
   grid-template-columns: auto;
 }
 
+.blur {
+  filter: blur(5px);
+}
+
 .main-container {
   display: grid;
   height: 53.125em;

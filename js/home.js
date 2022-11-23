@@ -5,6 +5,7 @@ const oneCardIcon = document.getElementById("one-card-switch");
 
 const moviesCard = document.getElementsByClassName("movie");
 
+
 oneCardIcon.addEventListener("click", function () {
     if (!oneCardIcon.classList.contains("switch-selected")) {
         oneCardIcon.classList.add("switch-selected");
@@ -24,3 +25,4 @@ multiCardIcon.addEventListener("click", function () {
         }
     }
 })
+
