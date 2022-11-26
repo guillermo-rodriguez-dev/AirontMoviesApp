@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-scss": "node-sass --watch css/login.scss css/login2.css"
-
+    "watch-scss": "node-sass --watch css/login.scss css/login2.css",
+    "type": "module"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
     "json-server-auth": "^2.1.0"
   },
   "dependencies": {
+    "esm": "^3.2.25",
     "sass": "^1.56.1"
   }
-
 }

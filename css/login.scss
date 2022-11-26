@@ -156,7 +156,15 @@
     border-style: none;
     font-weight: bold;
 
+
+    &:hover {
+        box-shadow: 1px 1px 5px 1px #2ab9fd;
+      
+      }
+    
 }
+
+
 
 
 .not-registered-container {
@@ -205,10 +213,12 @@
     font-size: 1.5rem;
     border-width: 2px;
     border-style: solid;
-
+    &:hover {
+        border-width: 3px;
+      
+      }
     img {
         margin-right: 1.5625em;
-
         padding-top: 0.8125rem;
         padding-bottom: 0.8125rem;
 

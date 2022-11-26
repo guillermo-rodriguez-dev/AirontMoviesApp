@@ -1,5 +1,7 @@
-const apiKey = "51a36c9caed1e09d8398a600b96856cc";
-const apiBaseUrl = "https://api.themoviedb.org/3";
+
+import constants from "./constants.js";	
+
+
 const movieContainer = document.getElementById("most-watched-movies-container");
 const movieDetailsModal = document.getElementById("movie-details-modal");
 const home = document.getElementById("home-container");
@@ -13,14 +15,14 @@ const movieGender = document.getElementById("movie-gender");
 const moviePopularity = document.getElementById("movie-popularity");
 const similarMoviesContainer = document.getElementById("footer-movie-container");
 const getMoviesFromApi = async () => {
-    let response = await fetch(`${apiBaseUrl}/movie/popular?api_key=${apiKey}&language=en-US&page=1`);
+    let response = await fetch(`${constants.apiBaseUrl}/movie/popular?api_key=${constants.apiKey}&language=en-US&page=1`);
     let data = await response.json();
     let movies = data.results;
     return movies;
 }
 
 const getSimilarMovies = async (movieId) => {
-    let response = await fetch(`${apiBaseUrl}/movie/${movieId}/similar?api_key=${apiKey}&language=en-US&page=1`);
+    let response = await fetch(`${constants.apiBaseUrl}/movie/${movieId}/similar?api_key=${constants.apiKey}&language=en-US&page=1`);
     let data = await response.json();
     let movies = data.results;
     return movies;
@@ -85,4 +87,3 @@ const addMostWatchesMovies = async () => {
 
 addMostWatchesMovies();
 
-]
