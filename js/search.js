@@ -2,6 +2,7 @@ import constants from "./constants.js";
 const searchbarInput = document.getElementById('searchbar-input');
 const searchIconButton = document.getElementById('searchbar-icon');
 const searchResultContainer = document.getElementById("search-result")
+
 const searchMovieByTitle = async (title) => {
     const response = await fetch(`${constants.apiBaseUrl}/search/movie?api_key=${constants.apiKey}&language=en-US&query=${title}&page=1&include_adult=false`);
     const data = await response.json();
