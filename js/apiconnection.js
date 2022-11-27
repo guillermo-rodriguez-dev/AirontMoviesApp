@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 
 import constants from "./constants.js";	
 
 
+=======
+const apiKey = "";
+const apiBaseUrl = "https://api.themoviedb.org/3";
+>>>>>>> 32b53f857cbcc223720fdd64f3ff4dee5eddd671
 const movieContainer = document.getElementById("most-watched-movies-container");
 const movieDetailsModal = document.getElementById("movie-details-modal");
 const home = document.getElementById("home-container");
@@ -87,3 +92,22 @@ const addMostWatchesMovies = async () => {
 
 addMostWatchesMovies();
 
+<<<<<<< HEAD
+=======
+
+{/* <div class="movie">
+
+    <h3 class="most-watched-movie-title">Godzilla vs Kong</h3>
+    <div class="rating-container">
+        <i class="fa fa-star rating-start--small" alt="rating start"></i>
+        <i class="fa fa-star rating-start--small" alt="rating start"></i>
+        <i class="fa fa-star rating-start--small" alt="rating start"></i>
+        <i class="fa fa-star rating-start--small" alt="rating start"></i>
+        <i class="fa fa-star rating-start--small" alt="rating start"></i>
+    </div>
+    <p class="most-watched-movie-description">Five years after Godzilla defeated King Ghidorah, Kong is
+        monitored by Monarch within a giant dome on
+        Skull Island.
+    </p>
+</div> */}
+>>>>>>> 32b53f857cbcc223720fdd64f3ff4dee5eddd671
