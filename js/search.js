@@ -2,7 +2,6 @@ import constants from "./constants.js";
 const searchbarInput = document.getElementById('searchbar-input');
 const searchIconButton = document.getElementById('searchbar-icon');
 const searchResultContainer = document.getElementById("search-result")
-
 const searchMovieByTitle = async (title) => {
     const response = await fetch(`${constants.apiBaseUrl}/search/movie?api_key=${constants.apiKey}&language=en-US&query=${title}&page=1&include_adult=false`);
     const data = await response.json();
@@ -10,28 +9,16 @@ const searchMovieByTitle = async (title) => {
     return movies;
 }
 
-
 searchIconButton.addEventListener('click', async (event) => {
     const movies = await searchMovieByTitle(searchbarInput.value);
     console.log(movies);
 });
 
-
-searchbarInput.addEventListener('keyup', async (event) => {
-    if (event.key === 'Enter') {
-        const movies = await searchMovieByTitle(searchbarInput.value);
-        console.log(movies);
-    }
-
-
-
-});
-
 searchbarInput.addEventListener('keydown', async (event) => {
     searchResultContainer.innerHTML = "";
     if (searchbarInput.value.length > 2) {
-        const movies = await searchMovieByTitle(searchbarInput.value);
-
+        let movies = await searchMovieByTitle(searchbarInput.value);
+        movies = movies.slice(0, 5);
         movies.forEach(element => {
             const movieResult = document.createElement("li");
             const movieImage = document.createElement("img");
@@ -45,7 +32,3 @@ searchbarInput.addEventListener('keydown', async (event) => {
         searchResultContainer.innerHTML = "";
     }
 });
-
-{/* <li><img src="../images/avatar.png"  /> Prueba    </li>
-
-</ul> */}
