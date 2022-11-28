@@ -24,16 +24,22 @@
         <form class="login-form" id="loginForm" action="http://localhost:3000/users" onsubmit="return signIn(event)"
             method="post">
             <input type="email" class="text-input" name="email" id="login-email-input" placeholder="Email"/>
-            <div class="password-container">
-                <input type="password" pattern=".{8,}" class="password-input" name="password" id="login-password-input" placeholder="Password"/>
+            <div class="error-message" id="error-message-email">
+
+            </div>
+            <div class="password-container" id="password-container">
+                <input type="password" class="password-input " name="password" id="login-password-input" placeholder="Password"/>
                 <img src="../images/eye.png" id="hide-revel-password"/>
+            </div>
+            <div class="error-message" id="error-message-password">
+
             </div>
             <div class="checkbox-container">
                 <input type="checkbox" name="remember" class="remember-me-checkbox" /> <label
                     class="remember-me-checkbox__label" for="remember-me-checkbox">Remember me</label>
                 <a id="forgot-password-link">Forgot Password?</a>
             </div>
-            <div class="error-message" id="error-message">
+            <div class="error-message" id="error-message-general">
 
             </div>
             <input value="Log in" type="submit" id="submit-login-buttom" class="submit-buttom" />

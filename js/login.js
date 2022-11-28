@@ -1,6 +1,8 @@
 
 const emailRegex = /.*@.*[.].*/;
 const passwordRegex = /.{8}.*/;
+const emailInputContainer = document.getElementById("login-email-input");
+const passwordInputContainer = document.getElementById("password-container");
 //function to register user
 async function signUp(event) {
     event.preventDefault();
@@ -61,24 +63,38 @@ async function signIn(event) {
     let loginForm = document.getElementById("loginForm");
     let email = loginForm.email.value;
     let password = loginForm.password.value;
-    let loginError = document.getElementById("error-message");
+    let loginError = document.getElementById("error-message-general");
+    let emailError = document.getElementById("error-message-email");
+    let passwordError = document.getElementById("error-message-general");
+
     if (email == "") {
-        loginError.innerHTML = "Please enter your email";
+        emailError.innerHTML = "Please enter your email";
+        emailInputContainer.classList.add("input-error-state");
         return false;
     }
-    if (!emailRegex.test(email)) {
-        loginError.innerHTML = "Please enter a valid email";
+    else if (!emailRegex.test(email)) {
+        emailInputContainer.classList.add("input-error-state");
+        emailError.innerHTML = "Please enter a valid email";
 
         return false;
+    } else {
+        emailInputContainer.classList.remove("input-error-state");
+        emailError.innerHTML = "";
     }
     if (password == "") {
-        loginError.innerHTML = "Please enter your password";
+        passwordInputContainer.classList.add("input-error-state");
+        passwordError.innerHTML = "Please enter your password";
 
         return false;
     }
-    if (!passwordRegex.test(password)) {
-        loginError.innerHTML = "Password must be at least 8 characters";
+    else if (!passwordRegex.test(password)) {
+        passwordInputContainer.classList.add("input-error-state");
+        passwordError.innerHTML = "Password must be at least 8 characters";
         return false;
+    }
+    else {
+        passwordInputContainer.classList.remove("input-error-state");
+        passwordError.innerHTML = "";
     }
 
     await fetch("http://localhost:3000/login", {
@@ -106,7 +122,7 @@ async function signIn(event) {
 
 
     ).catch(error => console.log("Error " + error));
-    ogin - password - input
+
 
 }
 
