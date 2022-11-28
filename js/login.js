@@ -3,6 +3,8 @@ const emailRegex = /.*@.*[.].*/;
 const passwordRegex = /.{8}.*/;
 const emailInputContainer = document.getElementById("login-email-input");
 const passwordInputContainer = document.getElementById("password-container");
+const passwordInput = document.getElementById("login-password-input");
+const hideRevelPassword = document.getElementById("hide-revel-password");
 //function to register user
 async function signUp(event) {
     event.preventDefault();
@@ -109,39 +111,23 @@ async function signIn(event) {
 
     }).then(response => {
         if (response.status == 200) {
-
+            document.cookie = `accesToken=${response.accesToken}`;
             window.location.href = "home.html";
-
         }
         else if (response.status == 400) {
             loginError.innerHTML = "Invalid email or password";
-
         }
-
     }
-
-
     ).catch(error => console.log("Error " + error));
-
-
 }
-
-
-const passwordInput = document.getElementById("login-password-input");
-
-const hideRevelPassword = document.getElementById("hide-revel-password");
-
 
 hideRevelPassword.addEventListener("click", function () {
     if (passwordInput.type === "password") {
         passwordInput.type = "text";
         console.log("password revel");
-
     }
     else {
         passwordInput.type = "password";
         console.log("password");
     }
-
-
 });
