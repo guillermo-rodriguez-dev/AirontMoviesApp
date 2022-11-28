@@ -61,21 +61,23 @@ async function signIn(event) {
     let loginForm = document.getElementById("loginForm");
     let email = loginForm.email.value;
     let password = loginForm.password.value;
-
+    let loginError = document.getElementById("error-message");
     if (email == "") {
-        alert("Please enter your email");
+        loginError.innerHTML = "Please enter your email";
         return false;
     }
     if (!emailRegex.test(email)) {
-        alert("Please enter a valid email");
+        loginError.innerHTML = "Please enter a valid email";
+
         return false;
     }
     if (password == "") {
-        alert("Please enter your password");
+        loginError.innerHTML = "Please enter your password";
+
         return false;
     }
     if (!passwordRegex.test(password)) {
-        alert("Password must be at least 8 characters");
+        loginError.innerHTML = "Password must be at least 8 characters";
         return false;
     }
 
@@ -91,12 +93,13 @@ async function signIn(event) {
 
     }).then(response => {
         if (response.status == 200) {
-            alert("User logged in successfully");
+
             window.location.href = "home.html";
 
         }
         else if (response.status == 400) {
-            alert("User or password incorrect");
+            loginError.innerHTML = "Invalid email or password";
+
         }
 
     }
