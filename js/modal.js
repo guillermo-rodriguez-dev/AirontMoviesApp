@@ -11,6 +11,7 @@ const movieDetailsDescription = document.getElementById("modal-movie-description
 const movieReleaseDate = document.getElementById("movie-release-date");
 const movieLanguaje = document.getElementById("movie-languaje");
 const movieGender = document.getElementById("movie-gender");''
+const playTrailerButton = document.getElementById("play-trailer-button");
 const fillModal = async (movie) => {
     movieDetailsModal.classList.add('overlay-modal');
     movieDetailsModal.classList.remove('hidden-modal');
@@ -27,11 +28,15 @@ const fillModal = async (movie) => {
     movieLanguaje.textContent = movie.original_language;
     movieGender.textContent = movie.genre_ids;
     moviePopularity.textContent = movie.vote_average;
+    playTrailerButton.addEventListener("click", () => {
+        globalThis.window.open(`https://google.com`, "_blank");
+    })
     const similarMovies = await apiConnection.getSimilarMovies(movie.id);
     for (let index = 0; index < 3; index++) {
         const similarMovie = document.createElement("img");
         similarMovie.classList.add("movie-image");
         similarMovie.src = `https://image.tmdb.org/t/p/h632${similarMovies[index].backdrop_path}`;
+
         similarMoviesContainer.appendChild(similarMovie);
     }
 }

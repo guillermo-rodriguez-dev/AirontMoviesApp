@@ -1,5 +1,6 @@
 import apiConnection from "./apiconnection.js";
 import modal from "./modal.js";
+import auth from "./auth.js";
 
 const multiCardIcon = document.getElementById("multi-card-switch");
 
@@ -9,10 +10,13 @@ const moviesCard = document.getElementsByClassName("movie");
 
 const movieContainer = document.getElementById("most-watched-movies-container");
 
+const logOutIcon = document.getElementById("log-out-buttom");
+
 let mostWatchedMoviesPage = 1;
 
 let totalPages;
 
+//this save switch state
 let oneCard = false;
 
 oneCardIcon.addEventListener("click", function () {
@@ -47,6 +51,9 @@ const fillMainMovie = (movie) => {
     genderLabel.innerHTML = movie.title;
     mainDescription.innerHTML = movie.overview;
     movieTitle.textContent = movie.title;
+    watchButton.addEventListener("click", () => {
+        globalThis.window.open(`https://google.com`, "_blank");
+    });
     const ratingStars = Math.round(movie.vote_average / 2);
     for (let start = 0; start < ratingStars; start++) {
         const star = document.createElement("i");
@@ -123,7 +130,9 @@ document.addEventListener("scroll", () => {
         });
     }
 })
-
+logOutIcon.addEventListener("click", () => {
+    auth.logOut();
+});
 
 
 

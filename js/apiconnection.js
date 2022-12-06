@@ -4,8 +4,6 @@ import constants from "./constants.js";
 const getMoviesFromApi = async (page = 1) => {
     let response = await fetch(`${constants.apiBaseUrl}/movie/popular?api_key=${constants.apiKey}&language=en-US&page=${page}`);
     let data = await response.json();
-    // let movies = data.results;
-    // let totalPages = data.total_pages;
     return data;
 }
 

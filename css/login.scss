@@ -2,6 +2,7 @@
 
 * {
     box-sizing: border-box;
+   
 }
 
 
@@ -31,13 +32,13 @@
     align-items: center;
 }
 
-.header__text {
+#login-title {
     width: 100%;
     color: $title-text-color;
-    font-size: 2.25em;
+    font-size: 2.625rem;
     text-align: center;
-    margin-top: 4.125em;
-    margin-bottom: 4.125em;
+    padding-top: 1.5em;
+    padding-bottom: 2.2em;
     font-family: $title-font;
     font-weight: 500;
     margin-block-start: 0em;
@@ -56,11 +57,11 @@
     border-radius: 10px;
     background-color: rgba(47, 47, 47, 255);
     width: 36.25rem;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 4.625rem;
+    font-size: 1rem;
 }
 
 .login-card__title {

@@ -25,11 +25,7 @@
             <img class="more-movies-icon" src="../images/backwardsSlash.svg" />
 
         </div>
-        <button class="blue-button buttom-container">Play Trailer</button>
-
-
-
-
+        <button class="blue-button buttom-container" id="play-trailer-button">Play Trailer</button>
         <h1 class="movie-title" id="movie-details-title">Avatar 2</h1>
         <p class="description" id="modal-movie-description">
             Avatar: The Way of Water is an upcoming American epic science-fiction film directed by James Cameron and
@@ -37,12 +33,7 @@
             (2009). Cameron is producing the film with Jon Landau, with Josh Friedman originally announced as Cameron's
             co-writer; it was later announced that Cameron, Friedman, Rick Jaffa, Amanda Silver.
         </p>
-
-
-
     </main>
-
-
     <section class="meta-data-container">
         <div class="meta-data">
             <p class="meta-data-title">Release Date</p>
@@ -65,15 +56,6 @@
     </section>
     <footer class="footer" id="footer-movie-container">
         <h2 class="footer-title">Similar Movies:</h2>
-        <!-- <img class="movie-image" src="../images/avatar.png" />
-        <img class="movie-image" src="../images/avatar.png" />
-        <img class="movie-image" src="../images/avatar.png" />
-        <div class="movie-image icon-image">
-            <img class="more-movies-icon" src="../images/forwardSlash.svg" />
-            <img class="more-movies-icon" src="../images/backwardsSlash.svg" />
-
-        </div> -->
-
     </footer>
 </div>
 
@@ -84,94 +66,43 @@
         <div class="searchbar-container">
             <img class="searchbar-icon" src="../images/search-icon.png" alt="search icon" id="searchbar-icon" />
             <input class="searchbar-input" type="search" placeholder="Search for a movie" id="searchbar-input" />
-            <ul class="search-resulta-container" id="search-result">
-   
-        </div>
-        
-        <button class="log-out-buttom">Log Out</button>
-        <img src="../images/profile.png" alt="profile image" class="profile-image">
-        
+            <ul class="search-resulta-container" id="search-result">  
+        </div>        
+        <button class="log-out-buttom" id="log-out-buttom">Log Out</button>
+        <img src="../images/profile.png" alt="profile image" class="profile-image">        
     </header>
     <main class="main-container" id="main-container">
         <h2 class="gender-label" id="gender">Science Fiction</h2>
         <div class="rating-container" id="rating-container">
-          
         </div>
         <h1 class="movie-title" id="movie-title">Avatar 2</h1>
         <p class="main-description-text" id="main-description-text">
             Set more than a decade after the events of the first film, Avatar: The Way of Water begins to tell the story
             of the Sully family, the trouble that follows them, the lengths they go to keep each other safe, the battles
             they fight to stay alive, and the tragedies they endure.
-
         </p>
         <button class="blue-button" id="watch-now-button">
             Watch Now
         </button>
-
     </main>
     <!-- most watched movies start -->
     <section class="most-watched-movies-container" id="most-watched-movies-container">
         <h2 class="most-watched-title">
             Most Watched Movies
         </h2>
-
         <div class="switch-container">
             <div class="multicard-switch switch-selected" id="multi-card-switch">
                 <img src="../images/rectangule.png">
                 <img src="../images/rectangule.png">
                 <img src="../images/rectangule.png">
-
             </div>
             <img src="../images/rectangule2.png" class="one-card-icon" id="one-card-switch">
-
-
         </div>
-<!-- 
-        <div class="movie">
-            <h3 class="most-watched-movie-title">Prey</h3>
-            <div class="rating-container">
-                <i class="fa fa-star rating-start--small" alt="rating start"></i>
-                <i class="fa fa-star rating-start--small" alt="rating start"></i>
-                <i class="fa fa-star rating-start--small" alt="rating start"></i>
-                <i class="fa fa-star rating-start--small" alt="rating start"></i>
-                <i class="fa fa-star rating-start--small" alt="rating start"></i>
-            </div>
-            <p>In 1719 in the Great Plains, Naru, a young Comanche woman trained as a healer, dreams of becoming a great
-                hunter.
-            </p>
-        </div>
-        <div class="movie">
-            <h3 class="most-watched-movie-title">Jurassic World
-                Dominion</h3>
-            <div class="rating-container">
-                <i class="fa fa-star rating-start--small" alt="rating start"></i>
-                <i class="fa fa-star rating-start--small" alt="rating start"></i>
-                <i class="fa fa-star rating-start--small" alt="rating start"></i>
-                <i class="fa fa-star rating-start--small" alt="rating start"></i>
-                <i class="fa fa-star rating-start--small" alt="rating start"></i>
-            </div>
-            <p>Four years after the Lockwood Estate incident and the cataclysmic volcanic eruption on Isla Nublar.
-            </p>
-        </div>
-        <div class="movie">
-
-            <h3 class="most-watched-movie-title">Godzilla vs Kong</h3>
-            <div class="rating-container">
-                <i class="fa fa-star rating-start--small" alt="rating start"></i>
-                <i class="fa fa-star rating-start--small" alt="rating start"></i>
-                <i class="fa fa-star rating-start--small" alt="rating start"></i>
-                <i class="fa fa-star rating-start--small" alt="rating start"></i>
-                <i class="fa fa-star rating-start--small" alt="rating start"></i>
-            </div>
-            <p class="most-watched-movie-description">Five years after Godzilla defeated King Ghidorah, Kong is
-                monitored by Monarch within a giant dome on
-                Skull Island.
-            </p>
-        </div> -->
     </section></div>
     <!--most watched movies end-->
 </body>
 <script  type="module" src='../js/constants.js'></script>
+<script src='../js/auth.js'  type="module></script>
 
 <script src='../js/home.js' type="module" ></script>
 <script  type="module" src='../js/apiconnection.js'></script>
