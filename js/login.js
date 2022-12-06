@@ -1,6 +1,6 @@
 
 const emailRegex = /.*@.*[.].*/;
-const passwordRegex = /.{8}.*/;
+const passwordRegex = new /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,20}$/;
 const emailInputContainer = document.getElementById("login-email-input");
 const passwordInputContainer = document.getElementById("password-container");
 const passwordInput = document.getElementById("login-password-input");

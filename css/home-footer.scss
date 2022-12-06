@@ -19,7 +19,7 @@
 }
 
 .movie {
-    background: linear-gradient(to top, #000000 20%, rgba(0, 0, 0, 0) 100%), url(../images/jurassic_world.png);
+    background: linear-gradient(to top, #000000 20%, rgba(0, 0, 0, 0) 100%);
     background-repeat: no-repeat;
     background-size: cover;
     height: 38.75em;
@@ -30,6 +30,35 @@
     justify-content: end;
     padding: 0 3.125em 1.875em 3.125em;
 
+    &:hover {
+        box-shadow: 0 0 15px white; 
+      }
+
+}
+
+
+.loader {
+    width: 5em;
+    height: 5em;
+    border: 5px solid #FFF;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .most-watched-movie-title {
@@ -140,32 +169,34 @@
     }
 
 }
+
 @media only screen and (min-width: 1440px) {
 
-  .most-watched-movies-container {
-    width: 100%;
-    grid-template-columns: auto auto auto;
-    column-gap: 60px;
-    justify-content: center;
-    padding-top: 0.75em;
-    padding-left: 1.25em;
-    padding-bottom: 9.375em;
+    .most-watched-movies-container {
+        width: 100%;
+        grid-template-columns: auto auto auto;
+        column-gap: 60px;
+        justify-content: center;
+        padding-top: 0.75em;
+        padding-left: 1.25em;
+        padding-bottom: 9.375em;
 
-  }
-
-
-  .movie {
-    height: 27.5em;
-    width: 20em;
-    padding: 0 1.875em 1.875em 1.875em;
+    }
 
 
-  }
-  .movie-full-size {
-    grid-column: 1/4;
-    width: 63.875em;
-    height: 27.5em;
-  }
+    .movie {
+        height: 27.5em;
+        width: 20em;
+        padding: 0 1.875em 1.875em 1.875em;
+
+
+    }
+
+    .movie-full-size {
+        grid-column: 1/4;
+        width: 63.875em;
+        height: 27.5em;
+    }
 }
 
 //end of most watched movies styling

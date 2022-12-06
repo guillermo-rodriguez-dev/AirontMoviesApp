@@ -119,7 +119,7 @@
 }
 
 .movie {
-  background: linear-gradient(to top, #000000 20%, rgba(0, 0, 0, 0) 100%), url(../images/jurassic_world.png);
+  background: linear-gradient(to top, #000000 20%, rgba(0, 0, 0, 0) 100%);
   background-repeat: no-repeat;
   background-size: cover;
   height: 38.75em;
@@ -130,7 +130,32 @@
   justify-content: end;
   padding: 0 3.125em 1.875em 3.125em;
 }
+.movie:hover {
+  box-shadow: 0 0 15px white;
+}
 
+.loader {
+  width: 5em;
+  height: 5em;
+  border: 5px solid #FFF;
+  border-bottom-color: #FF3D00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .most-watched-movie-title {
   font-size: 2.25rem;
   font-weight: 700;
