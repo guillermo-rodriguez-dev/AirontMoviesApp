@@ -13,8 +13,8 @@ const auth = {
     },
 
     //function to login user
-    signIn: async (event) => {
-        event.preventDefault();
+    signIn: async () => {
+        
         let loginForm = document.getElementById("loginForm");
         let email = loginForm.email.value;
         let password = loginForm.password.value;

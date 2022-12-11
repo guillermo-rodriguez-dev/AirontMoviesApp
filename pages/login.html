@@ -21,7 +21,7 @@
     <div class="login-card">
         <h2 class="login-card__title">Welcome! Log in or Register</h2>
         <h3 class="login-card__subtitle">Log in to find the movies you're looking for!</h3>
-        <form class="login-form" id="loginForm" action="http://localhost:3000/users" onsubmit="return signIn(event)"
+        <form class="login-form" id="loginForm" onsubmit="return signIn(event)"
             method="post">
             <input type="email" class="text-input" name="email" id="login-email-input" placeholder="Email"/>
             <div class="error-message" id="error-message-email">
@@ -58,7 +58,7 @@
         </button>
     </div>
 </body>
-<script src='../js/auth.js'  type="module></script>
+<script src='../js/auth.js'  type="module"></script>
 
-<script src='../js/login.js'></script>
+<script src='../js/login.js' type="module"></script>
 </html>

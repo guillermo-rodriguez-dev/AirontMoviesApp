@@ -1,7 +1,5 @@
 import auth from "./auth.js";
 
-
-
 const hideRevelPassword = document.getElementById("hide-revel-password");
 const passwordInput = document.getElementById("login-password-input");
 const loginButton = document.getElementById("submit-login-buttom");
@@ -18,6 +16,8 @@ hideRevelPassword.addEventListener("click", function () {
     }
 });
 
-const signIn = async (event) => {
-    auth.signIn(event);
-}
+loginForm.addEventListener("submit", function  async (event)  {
+    console.log("login button clicked");
+    event.preventDefault();
+     auth.signIn();
+})
