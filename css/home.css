@@ -32,7 +32,7 @@
   justify-content: start;
 }
 .searchbar-container:focus-within {
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  outline: solid 0.2rem #2ab9fd;
 }
 
 .searchbar-icon {
@@ -276,6 +276,19 @@
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
+}
+.blue-button:hover {
+  background-color: #4FC7FF;
+}
+.blue-button:visited {
+  background-color: #4FC7FF;
+}
+.blue-button:active {
+  background-color: #FFFFFF;
+  color: #2791C2;
+}
+.blue-button:focus {
+  outline: 2px solid #82CAFF;
 }
 
 @media only screen and (min-width: 834px) {

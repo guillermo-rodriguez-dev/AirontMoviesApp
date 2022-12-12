@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+a {
+  color: #2ab9fd;
+}
+
 .main-container {
   font-family: "Open Sans", sans-serif;
   justify-content: center;
@@ -93,7 +97,6 @@
   width: 100%;
   border-radius: 5px;
   background-color: white;
-  margin-top: 1em;
 }
 .password-container img {
   padding-right: 16px;
@@ -114,8 +117,8 @@
 
 .error-message {
   color: red;
-  font-size: 1rem;
-  margin-top: 1em;
+  font-size: 0.7rem;
+  height: 1rem;
 }
 
 .checkbox-container {
@@ -250,6 +253,9 @@
     border-style: none;
     font-size: 0.813rem;
   }
+  .text-input:focus {
+    outline: solid 0.2rem #2ab9fd;
+  }
   .password-container {
     background-color: white;
   }
@@ -259,11 +265,17 @@
     align-self: center;
     padding-right: 1em;
   }
+  .password-container:focus-within {
+    outline: solid 0.2rem #2ab9fd;
+  }
   .password-input {
     padding: 0.8em;
     height: 2.375em;
     border-style: none;
     font-size: 0.813rem;
+  }
+  .password-input:focus {
+    outline: none;
   }
   .checkbox-container {
     width: 100%;

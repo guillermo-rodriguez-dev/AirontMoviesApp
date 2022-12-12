@@ -2,9 +2,12 @@
 
 * {
     box-sizing: border-box;
-   
+
 }
 
+a{
+    color: #2ab9fd;
+}
 
 
 
@@ -104,7 +107,7 @@
 
     border-radius: 5px;
     background-color: white;
-    margin-top: 1em;
+    
 
     img {
         padding-right: 16px;
@@ -122,16 +125,15 @@
     font-size: 1.5rem;
 }
 
-.input-error-state{
+.input-error-state {
     border: 2px solid red;
-    
+
 }
 
-.error-message{
+.error-message {
     color: red;
-    font-size: 1rem;
-    margin-top: 1em;
-  
+    font-size: 0.7rem;
+    height: 1rem;
 }
 
 
@@ -174,9 +176,9 @@
 
     &:hover {
         box-shadow: 1px 1px 5px 1px #2ab9fd;
-      
-      }
-    
+
+    }
+
 }
 
 
@@ -228,10 +230,12 @@
     font-size: 1.5rem;
     border-width: 2px;
     border-style: solid;
+
     &:hover {
         border-width: 3px;
-      
-      }
+
+    }
+
     img {
         margin-right: 1.5625em;
         padding-top: 0.8125rem;
@@ -296,6 +300,11 @@
         border-style: none;
         font-size: 0.813rem;
 
+        &:focus {
+
+            outline: solid 0.2rem #2ab9fd;
+        }
+
     }
 
     .password-container {
@@ -310,6 +319,14 @@
 
 
         }
+
+        &:focus-within {
+
+            outline: solid 0.2rem #2ab9fd;
+
+
+
+        }
     }
 
     .password-input {
@@ -320,6 +337,14 @@
         height: 2.375em;
         border-style: none;
         font-size: 0.813rem;
+
+        &:focus {
+
+            outline: none;
+
+
+
+        }
     }
 
 
@@ -373,4 +398,3 @@
     }
 
 }
-

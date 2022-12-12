@@ -5,7 +5,26 @@
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
+
+  &:hover {
+    background-color: #4FC7FF;
+  }
+
+  &:visited {
+    background-color: #4FC7FF;
+  }
+
+  &:active {
+    background-color: #FFFFFF;
+    color: $main-color;
+  }
+
+  &:focus {
+    outline: 2px solid #82CAFF;
+  }
 }
+
+
 
 
 
