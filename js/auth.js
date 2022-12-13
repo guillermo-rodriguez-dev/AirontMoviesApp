@@ -9,6 +9,9 @@ const passwordInputContainer = document.getElementById("password-container");
 const auth = {
     logOut: () => {
         document.cookie = ``;
+        localStorage.removeItem("accessToken");
+        sessionStorage.removeItem("accessToken");
+
         window.location.href = "login.html";
     },
 
@@ -21,6 +24,7 @@ const auth = {
         let loginError = document.getElementById("error-message-general");
         let emailError = document.getElementById("error-message-email");
         let passwordError = document.getElementById("error-message-general");
+        let rememberMe = document.getElementById("rememberMe");
 
         if (email == "") {
             emailError.innerHTML = "Please enter your email";
@@ -63,7 +67,12 @@ const auth = {
 
         }).then(response => {
             if (response.status == 200) {
-                document.cookie = `accesToken=${response.accesToken}`;
+                
+                if (rememberMe.checked) {
+                    localStorage.setItem("accessToken", response.accesToken);
+                }else{
+                    sessionStorage.setItem("accessToken", response.accesToken);
+                }
                 window.location.href = "home.html";
             }
             else if (response.status == 400) {
@@ -113,7 +122,7 @@ const auth = {
             passwordError.innerHTML = "";
         }
 
-        await fetch("http://localhost:3000/signup", {
+        fetch("http://localhost:3000/signup", {
             method: "post",
             body: JSON.stringify({
                 email: email,
@@ -130,7 +139,7 @@ const auth = {
                 window.location.href = "home.html";
             }
             else if (response.status == 400) {
-                loginError.innerHTML = "Invalid email already exists";
+                loginError.innerHTML = "Email already exists";
             }
         }
         ).catch(error => { console.log("Error " + error) }, loginError.innerHTML = "Error Connecting with Server");

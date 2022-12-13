@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "esm": "^3.2.25",
+    "jsonwebtoken": "^8.5.1",
     "sass": "^1.56.1"
   }
 }

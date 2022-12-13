@@ -32,6 +32,7 @@ const fillModal = async (movie) => {
         globalThis.window.open(`https://google.com`, "_blank");
     })
     const similarMovies = await apiConnection.getSimilarMovies(movie.id);
+    similarMoviesContainer.innerHTML = "";
     for (let index = 0; index < 3; index++) {
         const similarMovie = document.createElement("img");
         similarMovie.classList.add("movie-image");
