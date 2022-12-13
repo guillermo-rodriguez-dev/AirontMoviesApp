@@ -3,7 +3,7 @@ import auth from "./auth.js";
 const hideRevelPassword = document.getElementById("hide-revel-password");
 const passwordInput = document.getElementById("login-password-input");
 const loginButton = document.getElementById("submit-login-buttom");
-const loginForm = document.getElementById("loginForm");
+const signUpForm = document.getElementById("signUpForm");
 
 hideRevelPassword.addEventListener("click", function () {
     if (passwordInput.type === "password") {
@@ -16,9 +16,11 @@ hideRevelPassword.addEventListener("click", function () {
     }
 });
 
-loginForm.addEventListener("submit", function async(event) {
-    console.log("login button clicked");
-    event.preventDefault();
-     auth.signIn();
-})
 
+
+
+signUpForm.addEventListener("submit", function async(event) {
+    console.log("sign in button clicked");
+    event.preventDefault();
+     auth.signUp();
+})

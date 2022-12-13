@@ -9,6 +9,21 @@
       "email": "guille@gmail.com",
       "password": "$2a$10$Ss4UhmMpmsOSczbf1o0ewusGZbAjX9VKPJtgqhBh///Zgg5m4vzg2",
       "id": 2
+    },
+    {
+      "email": "guille1@gmail.com",
+      "password": "$2a$10$tgclLdjDzQT0nXRKQ855Suo11Xh3U0SDowaMMl32/dNgMKiZEVbyS",
+      "id": 3
+    },
+    {
+      "email": "guille2@gmail.com",
+      "password": "$2a$10$iUoF4HVZXZ732f94qfhBnu8IhVGbKY.z65GmkwXgZwDLiHA9D4o8a",
+      "id": 4
+    },
+    {
+      "email": "guille3@gmail.com",
+      "password": "$2a$10$APRdxP.z4ttnV2OkupmIcep.oL069Qg5g5Nmf2GHLfVLYdesTvVTC",
+      "id": 5
     }
   ]
 }

@@ -1,7 +1,7 @@
 
 
 const emailRegex = /.*@.*[.].*/;
-const passwordRegex = new RegExp(/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,20}$/);
+const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 const emailInputContainer = document.getElementById("login-email-input");
 const passwordInputContainer = document.getElementById("password-container");
 
@@ -30,7 +30,6 @@ const auth = {
         else if (!emailRegex.test(email)) {
             emailInputContainer.classList.add("input-error-state");
             emailError.innerHTML = "Please enter a valid email";
-
             return false;
         } else {
             emailInputContainer.classList.remove("input-error-state");
@@ -44,7 +43,7 @@ const auth = {
         }
         else if (!passwordRegex.test(password)) {
             passwordInputContainer.classList.add("input-error-state");
-            passwordError.innerHTML = "Password must be at least 8 characters";
+            passwordError.innerHTML = "Password must be at least 8 characters and contain one letter and one number";
             return false;
         }
         else {
@@ -52,7 +51,7 @@ const auth = {
             passwordError.innerHTML = "";
         }
 
-        await fetch("http://localhost:3000/login", {
+     fetch("http://localhost:3000/login", {
             method: "post",
             body: JSON.stringify({
                 email: email,
@@ -71,36 +70,51 @@ const auth = {
                 loginError.innerHTML = "Invalid email or password";
             }
         }
-        ).catch(error => { console.log("Error " + error) }, loginError.innerHTML = "Error Connecting with Server");
+        ).catch(error => { console.log("Error " + error), loginError.innerHTML = "Error Connecting with Server"});
     }
     ,
 
 
-    signUp: async (event) => {
-        event.preventDefault();
-        let loginForm = document.getElementById("loginForm");
-        let email = loginForm.email.value;
-        let password = loginForm.password.value;
+    signUp: async () => {
+        
+        let signUpForm = document.getElementById("signUpForm");
+        let email = signUpForm.email.value;
+        let password = signUpForm.password.value;
+        let loginError = document.getElementById("error-message-general");
+        let emailError = document.getElementById("error-message-email");
+        let passwordError = document.getElementById("error-message-general");
 
         if (email == "") {
-            alert("Please enter your email");
+            emailError.innerHTML = "Please enter your email";
+            emailInputContainer.classList.add("input-error-state");
             return false;
         }
-        if (!emailRegex.test(email)) {
-            alert("Please enter a valid email");
+        else if (!emailRegex.test(email)) {
+            emailInputContainer.classList.add("input-error-state");
+            emailError.innerHTML = "Please enter a valid email";
             return false;
+        } else {
+            emailInputContainer.classList.remove("input-error-state");
+            emailError.innerHTML = "";
         }
         if (password == "") {
-            alert("Please enter your password");
+            passwordInputContainer.classList.add("input-error-state");
+            passwordError.innerHTML = "Please enter your password";
+
             return false;
         }
-        if (!passwordRegex.test(password)) {
-            alert("Password must be at least 8 characters");
+        else if (!passwordRegex.test(password)) {
+            passwordInputContainer.classList.add("input-error-state");
+            passwordError.innerHTML = "Password must be at least 8 characters and contain one letter and one number";
             return false;
+        }
+        else {
+            passwordInputContainer.classList.remove("input-error-state");
+            passwordError.innerHTML = "";
         }
 
-        await fetch("http://localhost:3000/users", {
-            method: "POST",
+        await fetch("http://localhost:3000/signup", {
+            method: "post",
             body: JSON.stringify({
                 email: email,
                 password: password
@@ -111,20 +125,16 @@ const auth = {
 
         }).then(response => {
             if (response.status == 201) {
-                alert("User created successfully");
-                window.location.href = "login.html";
-
+                loginError.innerHTML = ""
+                document.cookie = `accesToken=${response.accesToken}`;
+                window.location.href = "home.html";
             }
             else if (response.status == 400) {
-                alert("There was an Error Creating User");
+                loginError.innerHTML = "Invalid email already exists";
             }
-
         }
-
-
-        ).catch(error => console.log("Error " + error));
-
-
+        ).catch(error => { console.log("Error " + error) }, loginError.innerHTML = "Error Connecting with Server");
+    
     }
 
 
