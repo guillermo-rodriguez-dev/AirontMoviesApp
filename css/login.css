@@ -90,6 +90,9 @@ a {
   border-radius: 5px;
   font-size: 1.5rem;
 }
+.text-input:focus {
+  outline: solid 0.2rem #2ab9fd;
+}
 
 .password-container {
   display: grid;
@@ -102,6 +105,9 @@ a {
   padding-right: 16px;
   align-self: center;
 }
+.password-container:focus-within {
+  outline: solid 0.2rem #2ab9fd;
+}
 
 .password-input {
   padding: 0.8em;
@@ -109,6 +115,9 @@ a {
   border-style: none;
   border-radius: 5px;
   font-size: 1.5rem;
+}
+.password-input:focus {
+  outline: none;
 }
 
 .input-error-state {
@@ -253,9 +262,6 @@ a {
     border-style: none;
     font-size: 0.813rem;
   }
-  .text-input:focus {
-    outline: solid 0.2rem #2ab9fd;
-  }
   .password-container {
     background-color: white;
   }
@@ -265,17 +271,11 @@ a {
     align-self: center;
     padding-right: 1em;
   }
-  .password-container:focus-within {
-    outline: solid 0.2rem #2ab9fd;
-  }
   .password-input {
     padding: 0.8em;
     height: 2.375em;
     border-style: none;
     font-size: 0.813rem;
-  }
-  .password-input:focus {
-    outline: none;
   }
   .checkbox-container {
     width: 100%;

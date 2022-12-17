@@ -98,6 +98,10 @@ a{
     border-style: none;
     border-radius: 5px;
     font-size: 1.5rem;
+    &:focus {
+
+        outline: solid 0.2rem #2ab9fd;
+    }
 }
 
 .password-container {
@@ -113,6 +117,13 @@ a{
         padding-right: 16px;
         align-self: center;
     }
+    &:focus-within {
+
+        outline: solid 0.2rem #2ab9fd;
+
+
+
+    }
 
 }
 
@@ -123,6 +134,13 @@ a{
     border-style: none;
     border-radius: 5px;
     font-size: 1.5rem;
+    &:focus {
+
+        outline: none;
+
+
+
+    }
 }
 
 .input-error-state {
@@ -300,10 +318,7 @@ a{
         border-style: none;
         font-size: 0.813rem;
 
-        &:focus {
-
-            outline: solid 0.2rem #2ab9fd;
-        }
+       
 
     }
 
@@ -320,13 +335,7 @@ a{
 
         }
 
-        &:focus-within {
-
-            outline: solid 0.2rem #2ab9fd;
-
-
-
-        }
+      
     }
 
     .password-input {
@@ -338,13 +347,7 @@ a{
         border-style: none;
         font-size: 0.813rem;
 
-        &:focus {
-
-            outline: none;
-
-
-
-        }
+       
     }
 
 
