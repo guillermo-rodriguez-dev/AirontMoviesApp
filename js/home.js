@@ -45,7 +45,7 @@ multiCardIcon.addEventListener("click", function () {
 })
 
 //this function is clled when the page is loaded to recover the main movie data
-const fillMainMovie = (movie) => {
+const fillMainMovie = async (movie) => {
     const mainContainer = document.getElementById("main-container");
     const genderLabel = document.getElementById("gender")
     const mainDescription = document.getElementById("main-description-text");
@@ -56,8 +56,10 @@ const fillMainMovie = (movie) => {
     genderLabel.innerHTML = movie.title;
     mainDescription.innerHTML = movie.overview;
     movieTitle.textContent = movie.title;
+    const getVideos = await apiConnection.getMovieTrailer(movie.id)
+    const trailerLink = getVideos.find(g => g.type === "Trailer")
     watchButton.addEventListener("click", () => {
-        globalThis.window.open(`https://google.com`, "_blank");
+        globalThis.window.open(`https://www.youtube.com/watch?v=${trailerLink.key}`, "_blank");
     });
     const ratingStars = Math.round(movie.vote_average / 2);
     for (let start = 0; start < ratingStars; start++) {

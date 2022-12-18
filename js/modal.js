@@ -10,7 +10,7 @@ const similarMoviesContainer = document.getElementById("footer-movie-container")
 const movieDetailsDescription = document.getElementById("modal-movie-description");
 const movieReleaseDate = document.getElementById("movie-release-date");
 const movieLanguaje = document.getElementById("movie-languaje");
-const movieGender = document.getElementById("movie-gender");''
+const movieGender = document.getElementById("movie-gender"); ''
 const playTrailerButton = document.getElementById("play-trailer-button");
 
 //date to string options
@@ -18,7 +18,7 @@ const options = {
     year: "numeric",
     month: "long",
     day: "numeric",
-  };
+};
 //this function is called when the user clicks a movie from the list to fill the modal window
 const fillModal = async (movie) => {
     movieDetailsModal.classList.add('overlay-modal');
@@ -31,18 +31,17 @@ const fillModal = async (movie) => {
     });
     modalMainContainer.style.backgroundImage = `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`;
     modalMovieModalTitle.textContent = movie.title;
-
-
-    
     movieDetailsDescription.textContent = movie.overview;
-
-
     movieReleaseDate.textContent = new Date(movie.release_date).toLocaleDateString("en-US", options);
     movieLanguaje.textContent = movie.original_language;
-    movieGender.textContent = movie.genre_ids;
-    moviePopularity.textContent = movie.vote_average;
+    const genres = await apiConnection.getMovieGenre(movie.id)
+    movieGender.textContent = genres.genres.filter(g => movie.genre_ids.includes(g.id)).map(g => g.name + " ");
+    moviePopularity.textContent = "5/" + movie.vote_average / 2;
+    const getVideos = await apiConnection.getMovieTrailer(movie.id)
+    const trailerLink = getVideos.find(g => g.type === "Trailer")
+
     playTrailerButton.addEventListener("click", () => {
-        globalThis.window.open(`https://google.com`, "_blank");
+        globalThis.window.open(`https://www.youtube.com/watch?v=${trailerLink.key}`, "_blank");
     })
     const similarMovies = await apiConnection.getSimilarMovies(movie.id);
     similarMoviesContainer.innerHTML = "";
@@ -57,4 +56,4 @@ const fillModal = async (movie) => {
 
 
 
-export default {fillModal};
+export default { fillModal };
