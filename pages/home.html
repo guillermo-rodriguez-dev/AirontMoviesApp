@@ -15,11 +15,15 @@
     <link rel='stylesheet' type='text/css' media='screen' href='../css/modal.css'>
 
     <link rel='stylesheet' type='text/css' media='screen' href='../css/home.css'>
-
+    <meta property="og:type" content="HomePage" />
+    <meta property="og:title" content="Movie Finder" />
+    <meta property="og:image" content="../images/imagenFonto.png" />
+    <meta property="og:description" content="Web page to find your favorite movies" />
+  
     <!-- <script src='../js/home.js'></script> -->
 </head>
 <div class="modal-container hidden-modal" id="movie-details-modal">
-    <main class="modal-content-container"  id="movie-details-modal-container">
+    <main class="modal-content-container" id="movie-details-modal-container">
         <div class="close-icon" id="close-button">
             <img class="more-movies-icon" src="../images/forwardSlash.svg" />
             <img class="more-movies-icon" src="../images/backwardsSlash.svg" />
@@ -59,53 +63,56 @@
     </footer>
 </div>
 
-<body class="body-container" >
-    <div id="home-container"> 
-    <header class="navbar">
-        <p class="app-name"><strong>MOVIE</strong><i>finder</i></p>
-        <div class="searchbar-container">
-            <img class="searchbar-icon" src="../images/search-icon.svg" alt="search icon" id="searchbar-icon" />
-            <input class="searchbar-input" type="search" placeholder="Search for a movie" id="searchbar-input" />
-            <ul class="search-resulta-container" id="search-result">  
-        </div>        
-        <button class="log-out-buttom" id="log-out-buttom">Log Out</button>
-        <img src="../images/profile.png" alt="profile image" class="profile-image">        
-    </header>
-    <main class="main-container" id="main-container">
-        <h2 class="gender-label" id="gender">Science Fiction</h2>
-        <div class="rating-container" id="rating-container">
-        </div>
-        <h1 class="movie-title" id="movie-title">Avatar 2</h1>
-        <p class="main-description-text" id="main-description-text">
-            Set more than a decade after the events of the first film, Avatar: The Way of Water begins to tell the story
-            of the Sully family, the trouble that follows them, the lengths they go to keep each other safe, the battles
-            they fight to stay alive, and the tragedies they endure.
-        </p>
-        <button class="blue-button" id="watch-now-button">
-            Watch Now
-        </button>
-    </main>
-    <!-- most watched movies start -->
-    <section class="most-watched-movies-container" id="most-watched-movies-container">
-        <h2 class="most-watched-title">
-            Most Watched Movies
-        </h2>
-        <div class="switch-container">
-            <div class="multicard-switch switch-selected" id="multi-card-switch">
-                <img src="../images/rectangle.svg">
-                <img src="../images/rectangle.svg">
-                <img src="../images/rectangle.svg">
+<body class="body-container">
+    <div id="home-container">
+        <header class="navbar">
+            <p class="app-name"><strong>MOVIE</strong><i>finder</i></p>
+            <div class="searchbar-container">
+                <img class="searchbar-icon" src="../images/search-icon.svg" alt="search icon" id="searchbar-icon" />
+                <input class="searchbar-input" type="search" placeholder="Search for a movie" id="searchbar-input" />
+                <ul class="search-resulta-container" id="search-result">
             </div>
-            <img src="../images/rectangle2.svg" class="one-card-icon" id="one-card-switch">
-        </div>
-    </section></div>
+            <button class="log-out-buttom" id="log-out-buttom">Log Out</button>
+            <img src="../images/profile.png" alt="profile image" class="profile-image">
+        </header>
+        <main class="main-container" id="main-container">
+            <h2 class="gender-label" id="gender">Science Fiction</h2>
+            <div class="rating-container" id="rating-container">
+            </div>
+            <h1 class="movie-title" id="movie-title">Avatar 2</h1>
+            <p class="main-description-text" id="main-description-text">
+                Set more than a decade after the events of the first film, Avatar: The Way of Water begins to tell the
+                story
+                of the Sully family, the trouble that follows them, the lengths they go to keep each other safe, the
+                battles
+                they fight to stay alive, and the tragedies they endure.
+            </p>
+            <button class="blue-button" id="watch-now-button">
+                Watch Now
+            </button>
+        </main>
+        <!-- most watched movies start -->
+        <section class="most-watched-movies-container" id="most-watched-movies-container">
+            <h2 class="most-watched-title">
+                Most Watched Movies
+            </h2>
+            <div class="switch-container">
+                <div class="multicard-switch switch-selected" id="multi-card-switch">
+                    <img src="../images/rectangle.svg">
+                    <img src="../images/rectangle.svg">
+                    <img src="../images/rectangle.svg">
+                </div>
+                <img src="../images/rectangle2.svg" class="one-card-icon" id="one-card-switch">
+            </div>
+        </section>
+    </div>
     <!--most watched movies end-->
 </body>
-<script  type="module" src='../js/constants.js'></script>
-<script src='../js/auth.js'  type="module></script>
+<script type="module" src='../js/constants.js'></script>
+<script src='../js/auth.js' type="module></script>
 
-<script src='../js/home.js' type="module" ></script>
-<script  type="module" src='../js/apiconnection.js'></script>
+<script src='../js/home.js' type=" module"></script>
+<script type="module" src='../js/apiconnection.js'></script>
 <script type="module" src='../js/search.js'></script>
 
 </html>

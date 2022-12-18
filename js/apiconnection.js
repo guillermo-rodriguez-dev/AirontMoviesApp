@@ -21,4 +21,12 @@ const getMovieGenre = async (movieId) => {
     return movies;
 }
 
+
+const getMovieTrailer = async (movieId) => {
+    let response = await fetch(`${constants.apiBaseUrl}/3/movie/${movieId}/videos?api_key=${constants.apiKey}&language=en-US&page=1`);
+    let data = await response.json();
+    let movies = data.results;
+    return movies;
+}
+
 export default { getSimilarMovies, getMoviesFromApi };

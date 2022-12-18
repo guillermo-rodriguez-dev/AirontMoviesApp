@@ -12,8 +12,10 @@ const movieContainer = document.getElementById("most-watched-movies-container");
 
 const logOutIcon = document.getElementById("log-out-buttom");
 
+//this value is the number of pages already loaded
 let mostWatchedMoviesPage = 1;
 
+//this value is the maximum number of pages that exist in moviesapi
 let totalPages;
 
 //this save switch state
@@ -30,6 +32,7 @@ oneCardIcon.addEventListener("click", function () {
     }
 })
 
+
 multiCardIcon.addEventListener("click", function () {
     oneCard = false;
     if (!multiCardIcon.classList.contains("switch-selected")) {
@@ -40,6 +43,8 @@ multiCardIcon.addEventListener("click", function () {
         }
     }
 })
+
+//this function is clled when the page is loaded to recover the main movie data
 const fillMainMovie = (movie) => {
     const mainContainer = document.getElementById("main-container");
     const genderLabel = document.getElementById("gender")
@@ -64,7 +69,7 @@ const fillMainMovie = (movie) => {
 }
 
 
-
+//this function recovers and fills the movies list
 const addMostWatchedMovies = (movies) => {
     for (let index = 1; index < movies.length; index++) {
         setTimeout(() => {
@@ -104,6 +109,8 @@ const addMostWatchedMovies = (movies) => {
 
     }
 }
+
+//this function charges the initial data for the home page
 const chargeHomePage = async () => {
     const movies = await apiConnection.getMoviesFromApi();
     totalPages = movies.total_pages;
@@ -112,12 +119,15 @@ const chargeHomePage = async () => {
     addMostWatchedMovies(movies.results);
 }
 
+//this function is clled when the user searchs for movies
 const chargeSearchResult = async (movies) => {
     const mostWatchedMovie = movies[0];
     fillMainMovie(mostWatchedMovie);
     addMostWatchedMovies(movies);
 }
 
+
+//this function is clled when the user scroll to the end of the list of movies to load more movies
 document.addEventListener("scroll", () => {
     if (globalThis.window.scrollY + globalThis.window.innerHeight >=
         document.documentElement.scrollHeight && mostWatchedMoviesPage < totalPages) {

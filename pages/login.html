@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -11,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&family=Open+Sans:wght@300&display=swap"
         rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='../css/login.css'>
+
 <body class="main-container" id="login-body">
     <header class="header" id="header-login">
         <div class="header__text" id="title-container">
@@ -21,20 +23,20 @@
     <div class="login-card">
         <h2 class="login-card__title">Welcome! Log in or Register</h2>
         <h3 class="login-card__subtitle">Log in to find the movies you're looking for!</h3>
-        <form class="login-form" id="loginForm"
-            >
-            <input type="email" class="text-input" name="email" id="login-email-input" placeholder="Email"/>
+        <form class="login-form" id="loginForm">
+            <input type="email" class="text-input" name="email" id="login-email-input" placeholder="Email" />
             <div class="error-message" id="error-message-email">
             </div>
             <div class="password-container" id="password-container">
-                <input type="password" class="password-input " name="password" id="login-password-input" placeholder="Password"/>
-                <img src="../images/eye.png" id="hide-revel-password"/>
+                <input type="password" class="password-input " name="password" id="login-password-input"
+                    placeholder="Password" />
+                <img src="../images/eye.png" id="hide-revel-password" />
             </div>
             <div class="error-message" id="error-message-password">
 
             </div>
             <div class="checkbox-container">
-                <input type="checkbox" name="remember" class="remember-me-checkbox" id="rememberMe"/> <label
+                <input type="checkbox" name="remember" class="remember-me-checkbox" id="rememberMe" /> <label
                     class="remember-me-checkbox__label" for="remember-me-checkbox">Remember me</label>
                 <a id="forgot-password-link">Forgot Password?</a>
             </div>
@@ -51,14 +53,15 @@
         <button class="login-external" id="login-facebook-button"><img src="../images/facebook-icon.png"></img>Login
             with
             Facebook</button>
-        <button class="login-external" id="login-twitter-button"><img src="../images/google-icon.png"></img>Login with
+        <button class="login-external" id="login-twitter-button"><img src="../images/twitter-icon.png"></img>Login with
             Twitter</button>
         <button class="login-external" id="login-google-button">
-            <img src="../images/twitter-icon.png"></img>Login with Google
+            <img src="../images/google-icon.png"></img>Login with Google
         </button>
     </div>
 </body>
-<script src='../js/auth.js'  type="module"></script>
+<script src='../js/auth.js' type="module"></script>
 
 <script src='../js/login.js' type="module"></script>
+
 </html>

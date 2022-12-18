@@ -12,6 +12,14 @@ const movieReleaseDate = document.getElementById("movie-release-date");
 const movieLanguaje = document.getElementById("movie-languaje");
 const movieGender = document.getElementById("movie-gender");''
 const playTrailerButton = document.getElementById("play-trailer-button");
+
+//date to string options
+const options = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+//this function is called when the user clicks a movie from the list to fill the modal window
 const fillModal = async (movie) => {
     movieDetailsModal.classList.add('overlay-modal');
     movieDetailsModal.classList.remove('hidden-modal');
@@ -23,8 +31,13 @@ const fillModal = async (movie) => {
     });
     modalMainContainer.style.backgroundImage = `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`;
     modalMovieModalTitle.textContent = movie.title;
+
+
+    
     movieDetailsDescription.textContent = movie.overview;
-    movieReleaseDate.textContent = movie.release_date;
+
+
+    movieReleaseDate.textContent = new Date(movie.release_date).toLocaleDateString("en-US", options);
     movieLanguaje.textContent = movie.original_language;
     movieGender.textContent = movie.genre_ids;
     moviePopularity.textContent = movie.vote_average;
