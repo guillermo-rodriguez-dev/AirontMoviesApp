@@ -17,8 +17,9 @@ hideRevelPassword.addEventListener("click", function () {
 });
 
 loginForm.addEventListener("submit", function async(event) {
-    console.log("login button clicked");
     event.preventDefault();
-     auth.signIn();
+    console.log("login button clicked");
+    auth.signIn();
+    
 })
 

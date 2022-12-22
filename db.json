@@ -24,6 +24,16 @@
       "email": "guille3@gmail.com",
       "password": "$2a$10$APRdxP.z4ttnV2OkupmIcep.oL069Qg5g5Nmf2GHLfVLYdesTvVTC",
       "id": 5
+    },
+    {
+      "email": "guill@gmail.com",
+      "password": "$2a$10$wny3aFvWsRjMlMMLKlcLBuUpfr3u.t4W/P2UVc3LQ47a7pTwY/gia",
+      "id": 6
+    },
+    {
+      "email": "prueba1@gmail.com",
+      "password": "$2a$10$/nl9fu67zBv0mRPkMpnZtuU60W2B9PsbnFwjpg.jvSviwxKBEvJXW",
+      "id": 7
     }
   ]
 }

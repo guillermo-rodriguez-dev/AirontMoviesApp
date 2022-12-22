@@ -162,12 +162,44 @@ a {
 .submit-buttom:hover {
   box-shadow: 1px 1px 5px 1px #2ab9fd;
 }
+.submit-buttom p {
+  content: "";
+  border: 5px solid #FFF;
+}
 
 .not-registered-container {
-  margin-top: 2.5em;
   font-size: 1.25rem;
 }
 
+.loader-space {
+  height: 2em;
+  width: 2em;
+  margin: 0.5em;
+}
+
+.loader {
+  height: 2em;
+  width: 2em;
+  margin: 0.5em;
+  border: 5px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1.2s linear infinite;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .line-with-text {
   display: flex;
   flex-direction: row;
@@ -298,8 +330,26 @@ a {
     font-weight: bold;
   }
   .not-registered-container {
-    margin-top: 0.625em;
     font-size: 0.625em;
+  }
+  .loader-space {
+    height: 0.6em;
+    width: 0.6em;
+    margin: 0.25em;
+  }
+  .loader {
+    height: 0.6em;
+    width: 0.6em;
+    margin: 0.25em;
+    border: 2px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1.2s linear infinite;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
   }
   .login-external {
     width: 22.375em;
